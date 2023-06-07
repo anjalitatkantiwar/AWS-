@@ -1,0 +1,24 @@
+1. create two new instance, inst1 and inst2
+2. Delete the .pem key of inst2 
+3. stop the inst2
+3. Goto volume and select the inst2 volume
+4. click on Action and detach volume 
+5. select the inst2 volume and click on action and attach volume
+6. Copy public ip of inst1
+7. paste in mobaxtrem
+8. Open mobaxtre then goto ssh and paste public ip in remote host, specify user 
+click - advance ssh setting add inst1 .pem key
+9. type lsblk, hvdf partition is show their.
+10. make directory name /var/anjali1
+11. mount that directory in  xvdf1 by using cmd (mount -o /dev/xvdf1 /var/anjali1)
+12. Check the partation by using lsblk cmd
+13. type (cat /home/ec2-user/.ssh/authorized_keys >> /var/anjali1/home/ec2-user/.ssh/authorized_key
+14. Umount that mount directory ( umount /var/anjali1/ ) and check by using lsblk cmd 
+15. Umount the mount directory ( umount /var/anjali1/ ) and check by using lsblk cmd 
+16. Go to inst2 volume - action and detach volume and again go in - action -  and attach volume 
+and select the inst2 - device - /dev/xvda  
+17. Goto instance start the instance - copy public ip 
+18. start  mobaxterm - goto session - paste public ip
+specify user name (ec2-user)- Advance ssh setting - copy inst1 .pem key
+19. Now login if u lost .pem file 
+20. successfully logged in without .pem key
